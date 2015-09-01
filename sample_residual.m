@@ -1,7 +1,11 @@
 function r = sample_residual(samples, Lambda, t, sig, N)
 	
-	if (~isempty(Lambda))   % if the current repn is NOT empty, then draw samples from it.
-							% current repn = sparse Fourier signal, NO noise.
+	% if the current repn is NOT empty, then draw samples from it.
+	% current repn = sparse Fourier signal (without any noise)
+	%
+	% Anna C. Gilbert
+	
+	if (~isempty(Lambda))   
 
 		freq = Lambda(:,1);
  		coef = Lambda(:,2);
