@@ -1,4 +1,16 @@
 function c = estimate_coeffs(xs, Lambda, Omega, k, ats, N)
+	%
+	% estimate_coeffs
+	% 
+	% August, 2015             
+	% Anna C. Gilbert
+	% 
+	% input: xs = samples of signal
+	%		 Lambda = list of (freq,coeff) pairs in current approx
+	%		 Omega = list of (freq,coeff) pairs found in this iteration
+	%        k = length of short filter
+	%        ats = list of (offset, dilation) pairs for random arith. progs
+	%        N = signal length
 	
 	i = sqrt(-1);
 	[reps, ~] = size(ats);
